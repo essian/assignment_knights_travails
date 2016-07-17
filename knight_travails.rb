@@ -2,30 +2,6 @@ Move = Struct.new(:x, :y, :depth, :child, :parent)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Searching a simple tree of nodes where each Node has an array of child nodes (some_node.children) using DFS.
 
 # a method that that takes a node 
