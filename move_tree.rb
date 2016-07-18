@@ -55,16 +55,13 @@ class MoveTree
     queue << @root
     while queue.size > 0
       current_node = queue.pop
-     actual_move_coords(current_node.x, current_node.y).each do |coords|
+      actual_move_coords(current_node.x, current_node.y).each do |coords|
         node = Move.new(coords[0], coords[1], (current_node.depth)+1, [], current_node)
         @count += 1
         queue.unshift(node) unless node.depth >= @max_depth
         current_node.children << node
-        
       end
-      
     end
-
   end
 
   def inspect
